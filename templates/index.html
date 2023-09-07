@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Links</title>
+</head>
+<body>
+    <h1>Welcome to Super Juden</h1>
+    <p>Welcome to Super Juden, your one-stop destination for all your grocery and household needs. We take pride in serving our community with top-quality products and exceptional service. Our journey began [year of establishment] with a vision to provide a convenient and enjoyable shopping experience for our customers.</p>
+    <a href="/goToAbout">About Us</a><br>
+    <h2>Products:</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - ${{ product.price }}
+                <form method="POST" action="/add_to_cart">
+                    <input type="hidden" name="product_name" value="{{ product.name }}">
+                    <input type="hidden" name="product_price" value="{{ product.price }}">
+                    <input type="hidden" name="product_availability" value="{{ product.availability }}">
+                    <button type="submit">Add to Cart</button>
+
+                </form>
+                
+            </li>
+        {% endfor %}
+
+        
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <p>{{ messages[-1] }}</p>
+                {% endif %}
+                {% endwith %}
+    </ul>
+
+    <a href="/goToCart">Go to Cart</a><br>
+    
+</body>
+</html>
