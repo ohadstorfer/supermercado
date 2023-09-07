@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
     <title>Color Links</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -13,9 +17,11 @@
 
 </head>
 <body>
-    <h1>Welcome to Super Juden</h1>
-    <p>Welcome to Super Juden, your one-stop destination for all your grocery and household needs. We take pride in serving our community with top-quality products and exceptional service. Our journey began [year of establishment] with a vision to provide a convenient and enjoyable shopping experience for our customers.</p>
-    <a href="/goToAbout">About Us</a><br>
+    <h1 class="text-center mx-auto">Welcome to Super Juden</h1>
+    <div class="text-center mx-auto"> <button type="button" class="btn btn-light"><a href="/goToAbout">About Us</a></button><br>
+         <a href="/goToCart">Go to Cart</a><br></div>
+    
+    
     <h2>Products:</h2>
     <ul>
         <!-- static\Milk.jpg -->
@@ -49,7 +55,7 @@
                 {% endwith %}
     </ul>
 
-    <a href="/goToCart">Go to Cart</a><br>
+    
     
 </body>
 </html>
